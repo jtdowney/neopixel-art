@@ -1,0 +1,23 @@
+[package]
+name = "neopixel-art"
+version = "0.1.0"
+authors = ["John Downey <jdowney@gmail.com>"]
+edition = "2018"
+
+[profile.release]
+lto = true
+panic = "abort"
+
+[dependencies]
+cortex-m = "0.6.3"
+cortex-m-rt = "0.6.13"
+panic-reset = "0.1.0"
+smart-leds = "0.3.0"
+
+[dependencies.stm32f1xx-hal]
+version = "0.6.1"
+features = ["rt", "stm32f103", "medium"]
+
+[dependencies.ws2812-timer-delay]
+version = "0.3.0"
+features = ["slow"]
